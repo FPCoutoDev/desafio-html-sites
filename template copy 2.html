@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template - Utilizar como modelo</title>
+    <link rel="stylesheet" href="base.css">
+    <style>
+
+#table1 tr:nth-child(even) {
+    background-color: rgb(107, 148, 243);
+}
+
+#table1 tr:nth-child(odd) {
+    background-color: rgb(161, 161, 255);
+}
+
+#table1 th, #table1 td {
+    background-color: rgb(30, 12, 109);
+    color: white;
+}
+    
+    label {
+    width: 100px;
+    text-align: right;
+    display: inline-block;
+    padding-right: 100px;
+}
+
+fieldset {
+    margin: 15px 0;
+    width: 850px;
+    border-radius: 40px;
+    border-color: royalblue;
+
+}
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: 0px;
+}
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="menu">
+            <font face="Verdana">
+            Acesse também:
+        </font>
+            <ul>
+                <li><a href="template copy.html">Página Principal</a></li>
+                <li><a href="template.html">Sobre a DIOvet</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="header">
+                <table>
+                    <tr>
+                      <td><img src="r.png" height="100" alt=""></td>
+                      <td><h1><font color="white" face="Verdana"><strong>DIOvet</strong></font></h1></td>
+                      <td><h4><font color="white" face="Verdana"><strong>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;</strong></font></h4></td>
+                      <td><h4><font color="white" face="Verdana"><sub>O bem do seu pet!</sub></font></h4></td>
+                      <td><h4><font color="white" face="Verdana"><strong>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;</strong></font></h4></td>
+                      <td><h4><font color="white" face="Verdana"><strong>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;</strong></font></h4></td>
+                      <td><img src="dog1.jpg" height="145" alt=""></td>
+                    </tr>
+                  </table>
+            </div>
+    
+            <div class="content">
+                <font face="Verdana">
+                <h1><strong>Nossos Serviços</strong></h1>
+                <p>Na <strong>DIOvet</strong>, oferecemos uma ampla gama de serviços para garantir a saúde e o bem-estar do seu pet. Contamos com consultas veterinárias acessíveis, exames laboratoriais, cirurgias, vacinação e acompanhamento nutricional. Além disso, disponibilizamos serviços de emergência e fisioterapia animal para recuperação e qualidade de vida. Nosso compromisso é proporcionar atendimento de qualidade para todos os pets, independentemente da condição financeira de seus tutores.</p>
+                <h2>Consulte abaixo a nossa tabela de horários!</h2>
+                <table id="table1" border="1" width="550" cellpadding="5" cellspacing="0">
+                    <tr>
+                        <th>Serviços</th>
+                        <th>Segunda a sexta</th>
+                        <th>Sábados</th>
+                        <th>Feriados</th>
+                    </tr>
+                    <tr>
+                        <td>Clinica geral</td>
+                        <td>08h-19h</td>
+                        <td>08h-16h</td>
+                        <td>08h-15h</td>
+                    </tr>
+                    <tr>
+                        <td>Psicologia</td>
+                        <td>08h-19h</td>
+                        <td>08h-14h</td>
+                        <td>08h-14h</td>
+                    </tr>
+                    <tr>
+                        <td>Pediatria</td>
+                        <td>08h-19h</td>
+                        <td>08h-14h</td>
+                        <td><center>-</center></td>
+                    </tr>
+                    <tr>
+                        <td>Oftalmologia</td>
+                        <td>08h-19h</td>
+                        <td>08h-14h</td>
+                        <td><center>-</center></td>
+                    </tr>
+                </table>
+                <h2>Gostou doque viu? Agende a consulta do seu pet agora!</h2>
+                <form name="Signup" autocomplete="off" method="get" onsubmit="return verificarChances()">
+    
+                    <fieldset>
+                        <legend>Dados PETssoais</legend> 
+                        <label>Nome do pet:<input type="text" name ="name"/></label><br>
+                        <label>Idade do pet: <input type="number" name ="age"/></label><br>
+                        <label>Raça do pet: <input type="text" name ="race"/><label><br>
+                        <label>E-mail do dono: <input type="email" name ="email"/></label><br>
+                        <p><strong>Qual especialidade?</strong></p>
+                        <select name="Qual especialidade?">
+                            <option value="GERAL">Geral</option><br>
+                            <option value="PSICOLOGIA">Psicologia</option><br>
+                            <option value="PEDIATRIA">Pediatria</option><br>
+                            <option value="OFTALMOLOGIA">Oftalmologia</option><br>
+                            <option value="dontknow">Não consigo destinguir</option><br>
+                        </select><br>
+                        <p><strong>Comente sobre o motivo da consulta:</strong></p>
+                        <textarea name="motivo" rows="4" cols="50" minlength="100">!</textarea><br><br>
+                        <button type="submit">Enviar formulário</button>
+            <button type="reset">Apagar todos os dados.</button><br>
+                    </fieldset>
+            <h2><strong>Nosso endereço:</strong></h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233541.38703590358!2d-45.34253926896696!3d-23.851144628776996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d2b9affe909da5%3A0x33528b73c3b9c6a2!2sParanabi%2C%20Ilhabela%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1741916623363!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </font>
+            </div>
+    
+            <div class="footer">
+                <h3>&nbsp;&nbsp;<font face="Verdana">INFORMAÇÕES DE CONTATO</h3>
+<ul>
+  <li><strong>Telefone Fixo:<font color="white" face="Verdana"> (11) 2345-meia78</font></li>
+  <li><strong>Celular:</strong><font color="white" face="Verdana"> (11) 98765-4321</font></li>
+  <li><strong>Email:</strong><font color="white" face="Verdana"> tanahorademolharobiscoito@diovet.com</font></li>
+  <li><strong>Endereço:</strong><font color="white" face="Verdana"> Rua dos Pets Felizes, 123 - Bairro Animal, São Paulo - SP</font></li>
+</ul>
+            </font>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
